@@ -1,6 +1,10 @@
+/* Importing custom fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 a {
@@ -147,6 +151,11 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
 .nav-menu ul {
   margin: 0;
   padding: 0;
