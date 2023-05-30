@@ -284,3 +284,21 @@ moon.addEventListener("click", (e) => {
     count++;
   }
 });
+
+// Get the hash from the URL
+const hash = window.location.hash;
+
+// Check if the hash exists and is not empty
+if (hash && hash !== "") {
+  // Remove the '#' character from the hash
+  const sectionId = hash.substring(1);
+
+  // Find the element with the corresponding ID
+  const targetElement = document.getElementById(sectionId);
+
+  // Check if the target element exists
+  if (targetElement) {
+    // Scroll to the target element
+    targetElement.scrollIntoView();
+  }
+}
