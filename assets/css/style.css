@@ -1422,21 +1422,21 @@ section {
 
 /* Contact row */
 
-/* .info {
-  padding: 1rem 0rem;
-}*/
-/* .row {
+
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* gap: 5rem; */
+}
+
+.contact .row{
+  max-width: 550px;
+  /* width: 50px; */
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  /* padding: 1rem 1rem !important; */
-} 
-
-.col-sm-6 {
-  display: flex;
-  align-items: center;
-  gap: 5rem;
 }
 
 .contact .info {
