@@ -1424,11 +1424,12 @@ section {
 
 /* .info {
   padding: 1rem 0rem;
-}
-.row {
+}*/
+/* .row {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   /* padding: 1rem 1rem !important; */
 } */
 

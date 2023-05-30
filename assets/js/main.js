@@ -256,10 +256,7 @@ moon.addEventListener("click", (e) => {
     document.documentElement.style.setProperty("--subheading-color", "white");
     document.documentElement.style.setProperty("--white-text-color", "white");
     document.documentElement.style.setProperty("--dark-div-color", "#161a23"); // light dark color
-    document.documentElement.style.setProperty(
-      "--hero-section-color",
-      "#161a23"
-    );
+    document.documentElement.style.setProperty("--hero-section-color", "black");
     // document.documentElement.style.setProperty("--subheading-color", "white");
     // document.documentElement.style.setProperty("--white-div-color", "black");
     document.body.style.backgroundColor = "#0d1117";
@@ -287,5 +284,3 @@ moon.addEventListener("click", (e) => {
     count++;
   }
 });
-
-// for theme shift
