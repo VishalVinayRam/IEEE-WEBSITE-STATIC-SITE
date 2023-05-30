@@ -131,7 +131,7 @@ a {
 # Header
 --------------------------------------------------------------*/
 
-#home-btn,
+/* #home-btn,
 #gallery-btn{
   color:  var(--white-text-color);
 }
@@ -140,7 +140,7 @@ a {
 #gallery-btn:hover{
   color:  var(--link-color);
   cursor: pointer;
-}
+} */
 
 
 
@@ -182,9 +182,9 @@ a {
 #header.header-scrolled,
 #header.header-inner-pages {
   background: var(--hero-section-color);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  opacity: 0.85;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0.9;
 }
 
 #header .logo {
@@ -413,7 +413,7 @@ a {
   text-decoration: none;
 }
 
-.mobile-nav .drop-down > a:after {
+.mobile-nav .drop-down > a :after {
   content: "\ea99";
   font-family: IcoFont;
   padding-left: 10px;
@@ -428,6 +428,8 @@ a {
 .mobile-nav .drop-down > a {
   padding-right: 35px;
 }
+
+
 
 .mobile-nav .drop-down ul {
   display: none;
@@ -2020,9 +2022,17 @@ section {
 
 /* GALLERY STYLING  */
 
-#gallery{
-  padding-top: 2.5rem;
+.Gallery{
+  padding-top: 6rem;
 }
+
+@media screen and (max-width: 500px) {
+    
+.Gallery{
+  padding-top: 2rem;
+}
+}
+
 
 .flex-container {
   margin-left: 25px;

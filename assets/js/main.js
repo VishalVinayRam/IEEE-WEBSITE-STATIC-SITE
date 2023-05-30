@@ -82,6 +82,7 @@
   });
 
   // Mobile Navigation
+  // Mobile Navigation
   if ($(".nav-menu").length) {
     var $mobile_nav = $(".nav-menu").clone().prop({
       class: "mobile-nav d-lg-none",
@@ -91,6 +92,14 @@
       '<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>'
     );
     $("body").append('<div class="mobile-nav-overly"></div>');
+
+    // Disable links
+    const disabledLinks = document.querySelectorAll(".disabled-link");
+    disabledLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+    });
 
     $(document).on("click", ".mobile-nav-toggle", function (e) {
       $("body").toggleClass("mobile-nav-active");
@@ -340,3 +349,16 @@ for (let i = 0; i < 8; i++) {
     });
   }
 }
+
+// =========================== To configure disabled links ========================//
+// Get all disabled link elements
+const disabledLinks = document.querySelectorAll(".disabled-link");
+
+// Loop through each disabled link
+disabledLinks.forEach((link) => {
+  // Add click event listener
+  link.addEventListener("click", function (event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+  });
+});
