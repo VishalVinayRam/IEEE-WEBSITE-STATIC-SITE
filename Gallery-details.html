@@ -9,6 +9,10 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+
+      <!-- Icons -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -35,11 +39,11 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
-        <div class="container d-flex align-items-center">
+        <div class="container navbar d-flex align-items-center" style="justify-content: space-between;">
 
-            <div class="col-lg-2 col-md-2 col-4 d-flex align-items-center justify-content-center">
+            <div>
                 <a href="index.html">
-                    <img src="assets/img/apple-touch-icon.png" width="70%" height="70%" class="img-fluid" alt="">
+                    <img src="assets/img/apple-touch-icon.png" id="logo" width="70%" height="70%" class="img-fluid" alt="ieeeuvce-logo" style="width: 6.5rem; ">
                 </a>
             </div>
 
@@ -47,38 +51,43 @@
             <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
             <nav class="nav-menu d-none d-lg-block">
-                <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li style="display: none;"></li>
+                <ul class="nav__ul">
+                    <li class="active"><a href="index.html"><span class="nav__text">Home</span></a></li>
 
                     <li>
-                        <a href="index.html#about">About</a>
-                    </li>
-
-                    <li>
-                        <a href="index.html#fests">Fests</a>
+                        <a href="#about"><span class="nav__text">About </span></a>
                     </li>
 
                     <li>
-                        <a href="index.html#sig">SIG</a>
+                        <a href="#Fests"><span class="nav__text">Fest</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#sig"><span class="nav__text">SIG</span><//a>
+                    </li>
+
+                    <li>
+                        <a href="#awrds"><span class="nav__text">Awards</span></a>
                     </li>
                     <li>
-                        <a href="index.html#awrds">Awards</a>
+                        <a href="Gallery-details.html"><span class="nav__text">Gallery</span></a>
                     </li>
                     <li>
-                        <a href="Gallery-details.html">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="index.html#team">Team</a>
+                        <a href="#team"><span class="nav__text">Team</span></a>
                     </li>
 
 
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="#contact"><span class="nav__text">Contact</span></a></li>
+
+                    <!-- <li class="theme__li display__none" id="sun-icon"><i class='bx bxs-sun' ></i></i></li> -->
+
                 </ul>
+               
             </nav>
             <!-- .nav-menu -->
-
-
+            <div class="theme__li" id ="theme-li">
+                <i class='bx bxs-moon' id="moon-icon" ></i>
+            </div>
         </div>
     </header>
     <!-- End Header -->
@@ -317,6 +326,7 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
