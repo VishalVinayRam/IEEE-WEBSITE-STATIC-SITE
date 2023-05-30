@@ -48,6 +48,7 @@
 
 <body>
 
+
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container navbar d-flex align-items-center" style="justify-content: space-between;">
@@ -63,7 +64,7 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul class="nav__ul">
-                    <li class="active"><a href="index.html"><span class="nav__text">Home</span></a></li>
+                    <li><span class="nav__text" id="home-btn">Home</span></li>
 
                     <li>
                         <a href="#about"><span class="nav__text">About </span></a>
@@ -81,7 +82,7 @@
                         <a href="#awrds"><span class="nav__text">Awards</span></a>
                     </li>
                     <li>
-                        <a href="Gallery-details.html"><span class="nav__text">Gallery</span></a>
+                        <span class="nav__text" id="gallery-btn">Gallery</span>
                     </li>
                     <li>
                         <a href="#team"><span class="nav__text">Team</span></a>
@@ -102,7 +103,7 @@
         </div>
     </header>
     <!-- End Header -->
-
+    <section id="home-page">
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
@@ -252,7 +253,7 @@
                     </div>
 
                     <div loading="lazy" class="col-lg-4 align-items-stretch order-1 order-lg-2 img p-3 m-3 image-banner"
-                        style='' data-aos="zoom-in" data-aos-delay="150">
+                        data-aos="zoom-in" data-aos-delay="150">
                         &nbsp;</div>
                 </div>
 
@@ -819,11 +820,237 @@
             © 2022 Copyright:
             <a href="{% url 'home_page' %}"> IEEE-UVCE</a>
         </div>
-        </div>
     </section>
 
     <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
     <div id="preloader"></div>
+</section>
+
+
+    <!-- =============================GALLERY COMPONENT====================================== -->
+
+    <div id="gallery" class="display__none">
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <!-- <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Gallery Details</li>
+                </ol>
+                <h2>Gallery Details</h2>
+
+            </div>
+        </section> -->
+        <!-- End Breadcrumbs -->
+
+        <!-- Gallery section-->
+        <section id="Gallery" class="Gallery">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <div class="row-lg-">
+                        <div class="col-lg-">
+                            <h2 style="margin-top: 80px;">Gallery</h2>
+                        </div>
+                    </div>
+
+                    <!-- 
+                    <ul id="Gallery-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">App</li>
+                        <li data-filter=".filter-card">Card</li>
+                        <li data-filter=".filter-web">Web</li>
+                    </ul> -->
+
+                    <div class="row Gallery-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-app">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/i16.JPG" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>Impetus decoration</h4>
+                                <p>UVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/i16.JPG" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/ieee_day.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>IEEE DAY</h4>
+                                <p>UVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/ieee_day.jpg" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-app">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/walk.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>Marathon</h4>
+                                <p>UVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/walk.jpg" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-card">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/boat.jpeg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>Sail over sea</h4>
+                                <p>UVCE, KR CircleUVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/boat.jpeg" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/electrical.jpeg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>Workshops</h4>
+                                <p>UVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/electrical.jpeg" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-app">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/online.png" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>Online events</h4>
+                                <p>UVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/online.png" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-card">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/ootige_kaliyona.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>Ootige Kaliyona</h4>
+                                <p>UVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/ootige_kaliyona.jpg" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-card">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/civil.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>Talks</h4>
+                                <p>UVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/civil.jpg" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 Gallery-item filter-web">
+                            <div class="Gallery-img"><img src="assets/img/Gallery/grp_photo.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="Gallery-info">
+                                <h4>Kagathon</h4>
+                                <p>UVCE, KR Circle</p>
+                                <a href="assets/img/Gallery/grp_photo.jpg" data-gall="GalleryGallery"
+                                    class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                                <a href="https://instagram.com/ieeeuvce" class="details-link" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+        </section>
+        <!--End Gallery-->
+
+        <!-- ======= Gallery Details Section ======= -->
+        <!-- <section id="Gallery-details" class="Gallery-details">
+            <div class="container">
+
+                <div class="Gallery-details-container">
+
+                    <div class="owl-carousel Gallery-details-carousel">
+                        <img src="assets/img/Gallery/Gallery-details-1.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/Gallery/Gallery-details-2.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/Gallery/Gallery-details-3.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="Gallery-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Web design</li>
+                            <li><strong>Client</strong>: ASU Company</li>
+                            <li><strong>Project date</strong>: 01 March, 2020</li>
+                            <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="Gallery-description">
+                    <h2>This is an example of Gallery detail</h2>
+                    <p>
+                        Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur
+                        dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                    </p>
+                </div>
+
+            </div>
+        </section> -->
+        <!-- End Gallery Details Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <section id="contact" class="contact">
+
+    
+        <hr>
+        <div class="footer-copyright text-center py-3" data-aos="fade-up">
+            <h5><a href="mailto:mohithvarmavs@ieee.org"><i class="icofont-envelope"></i> Mohith Varma V S</a></h5>
+            <h6><a target="_blank"
+                    href="https://www.google.com/maps/place/UVCE/@12.9753541,77.5845553,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1672fcfc6af1:0x9c2dc517c9231979!8m2!3d12.9753821!4d77.586793"><i
+                        class="icofont-google-map"></i>
+                    UVCE, K.R Circle, B.R Ambedkar Veedhi, Bengaluru </a></h6>
+            © 2020 Copyright:
+            <a href="{% url 'home_page' %}"> IEEE-UVCE</a>
+        </div>
+        </div>
+    </section>
+    <!-- End Footer -->
+
+    <!-- <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+    <div id="preloader"></div> -->
+    </div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>

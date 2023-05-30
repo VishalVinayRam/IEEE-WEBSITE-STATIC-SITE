@@ -237,9 +237,11 @@
   });
 })(jQuery);
 
+// ======================== DARK MODE JS =======================================//
 // custom js for dark mode.
 const moon = document.getElementById("moon-icon");
 let count = 0;
+
 moon.addEventListener("click", (e) => {
   moon.classList.toggle("bxs-moon");
   moon.classList.toggle("bxs-sun");
@@ -259,7 +261,7 @@ moon.addEventListener("click", (e) => {
     document.documentElement.style.setProperty("--hero-section-color", "black");
     // document.documentElement.style.setProperty("--subheading-color", "white");
     // document.documentElement.style.setProperty("--white-div-color", "black");
-    document.body.style.backgroundColor = "#0d1117";
+    document.body.style.backgroundColor = "#0d1117"; // dark color
     count++;
   } else {
     document.documentElement.style.setProperty("--text-color", "#444444");
@@ -272,8 +274,8 @@ moon.addEventListener("click", (e) => {
       "#343a40;"
     );
     document.documentElement.style.setProperty("--subheading-color", "#37517e");
-    document.documentElement.style.setProperty("--white-text-color", "#fff");
-    document.documentElement.style.setProperty("--dark-div-color", "#f3f4fb"); // light dark color
+    document.documentElement.style.setProperty("--white-text-color", "#fff"); // grayish color
+    document.documentElement.style.setProperty("--dark-div-color", "#f3f4fb");
     document.documentElement.style.setProperty(
       "--hero-section-color",
       "#37517e"
@@ -300,5 +302,41 @@ if (hash && hash !== "") {
   if (targetElement) {
     // Scroll to the target element
     targetElement.scrollIntoView();
+  }
+}
+
+// ================== Handling component shifting =======================//
+const gallery = document.getElementById("gallery");
+const galleryBtn = document.getElementById("gallery-btn");
+const homePage = document.getElementById("home-page");
+const homeBtn = document.getElementById("home-btn");
+const allLi = document.getElementsByTagName("li");
+console.log(allLi);
+
+galleryBtn.addEventListener("click", () => {
+  gallery.classList.remove("display__none");
+  homePage.classList.add("display__none");
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Optional: Add smooth scrolling animation
+  });
+});
+
+homeBtn.addEventListener("click", () => {
+  gallery.classList.add("display__none");
+  homePage.classList.remove("display__none");
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Optional: Add smooth scrolling animation
+  });
+});
+
+for (let i = 0; i < 8; i++) {
+  if (i == 5) {
+  } else {
+    allLi[i].addEventListener("click", () => {
+      gallery.classList.add("display__none");
+      homePage.classList.remove("display__none");
+    });
   }
 }
