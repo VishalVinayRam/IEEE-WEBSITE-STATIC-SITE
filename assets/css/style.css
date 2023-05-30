@@ -48,12 +48,6 @@ a {
   /*  --subheading-color: #0d1117 */
 }
 
-/* Position relative */
-
-p-relative{
-  position: relative;
-}
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1427,6 +1421,17 @@ section {
 --------------------------------------------------------------*/
 
 /* Contact row */
+
+/* .info {
+  padding: 1rem 0rem;
+}*/
+/* .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: 1rem 1rem !important; */
+} 
 
 .col-sm-6 {
   display: flex;
